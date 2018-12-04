@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.3/workbox-sw.js");
 
 importScripts(
-  "/precache-manifest.2d64fa49b10e2b9c9b54a93b4f3c3611.js"
+  "/precache-manifest.0cd5dd7e9b8607b083ed11be68ef6314.js"
 );
 
 workbox.core.setCacheNameDetails({prefix: "shawn-portfolio-2018"});
