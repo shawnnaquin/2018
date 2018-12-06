@@ -1,4 +1,4 @@
-importScripts("/precache-manifest.8a7f9b52c88a80af2b8a222b95dd43fd.js", "https://storage.googleapis.com/workbox-cdn/releases/3.6.3/workbox-sw.js");
+importScripts("/precache-manifest.63ff4a34cadf7d6fc67b2f40efae4fcd.js", "https://storage.googleapis.com/workbox-cdn/releases/3.6.3/workbox-sw.js");
 
 if (workbox) {
     console.log(`Workbox is loaded`);
@@ -7,11 +7,20 @@ if (workbox) {
     workbox.precaching.suppressWarnings();
     workbox.precaching.precacheAndRoute(self.__precacheManifest, {});
 }
+
 else {
+
     console.log(`Workbox didn't load`);
+
 }
 
 self.addEventListener("message", (e)=>{
-    if (e.data.action=='skipWaiting') self.skipWaiting()
-    	console.log('message');
+
+    if (e.data.action=='skipWaiting') {
+    	self.skipWaiting()
+    }
+
+	console.log('message', e.data.action );
+
 });
+
