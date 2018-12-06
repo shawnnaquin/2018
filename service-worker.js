@@ -1,4 +1,4 @@
-importScripts("/precache-manifest.8942af2c3f3c64f73b807138403ea45a.js", "https://storage.googleapis.com/workbox-cdn/releases/3.6.3/workbox-sw.js");
+importScripts("/precache-manifest.b53be05d3fb3a4801cbba5fc88356b22.js", "https://storage.googleapis.com/workbox-cdn/releases/3.6.3/workbox-sw.js");
 
 if (workbox) {
     console.log(`Workbox is loaded`);
@@ -14,4 +14,4 @@ else {
 self.addEventListener("message", (e)=>{
     if (e.data.action=='skipWaiting') self.skipWaiting()
     	console.log('message');
-})
+});
