@@ -1,29 +1,17 @@
-/**
- * Welcome to your Workbox-powered service worker!
- *
- * You'll need to register this file in your web app and you should
- * disable HTTP caching for this file too.
- * See https://goo.gl/nhQhGp
- *
- * The rest of the code is auto-generated. Please don't update this file
- * directly; instead, make changes to your Workbox build configuration
- * and re-run your build process.
- * See https://goo.gl/2aRDsh
- */
+importScripts("/precache-manifest.8942af2c3f3c64f73b807138403ea45a.js", "https://storage.googleapis.com/workbox-cdn/releases/3.6.3/workbox-sw.js");
 
-importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.3/workbox-sw.js");
+if (workbox) {
+    console.log(`Workbox is loaded`);
+    // workbox.precaching.precacheAndRoute(self.__precacheManifest);
+    // self.__precacheManifest = [].concat(self.__precacheManifest || []);
+    workbox.precaching.suppressWarnings();
+    workbox.precaching.precacheAndRoute(self.__precacheManifest, {});
+}
+else {
+    console.log(`Workbox didn't load`);
+}
 
-importScripts(
-  "/precache-manifest.a03e7969e18c075f83336f7f0f3c76fb.js"
-);
-
-workbox.core.setCacheNameDetails({prefix: "shawn-portfolio-2018"});
-
-/**
- * The workboxSW.precacheAndRoute() method efficiently caches and responds to
- * requests for URLs in the manifest.
- * See https://goo.gl/S9QRab
- */
-self.__precacheManifest = [].concat(self.__precacheManifest || []);
-workbox.precaching.suppressWarnings();
-workbox.precaching.precacheAndRoute(self.__precacheManifest, {});
+self.addEventListener("message", (e)=>{
+    if (e.data.action=='skipWaiting') self.skipWaiting()
+    	console.log('message');
+})
