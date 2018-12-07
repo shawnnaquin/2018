@@ -1,4 +1,4 @@
-importScripts("/precache-manifest.139edb16b0b51728844e87579394f5a4.js", "/workbox-v3.6.3/workbox-sw.js");
+importScripts("/precache-manifest.1de1e3c7e651772d3b64e94390b2dd91.js", "/workbox-v3.6.3/workbox-sw.js");
 workbox.setConfig({modulePathPrefix: "/workbox-v3.6.3"});
 /**
  * Welcome to your Workbox-powered service worker!
@@ -12,9 +12,8 @@ workbox.setConfig({modulePathPrefix: "/workbox-v3.6.3"});
  * and re-run your build process.
  * See https://goo.gl/2aRDsh
  */
-let workbox = window.workbox || null;
 workbox.routing.registerNavigationRoute("/index.html");
-workbox.core.setCacheNameDetails({ prefix: "shawn-portfolio-2018" });
+window.workbox.core.setCacheNameDetails({ prefix: "shawn-portfolio-2018" });
 /**
  * The workboxSW.precacheAndRoute() method efficiently caches and responds to
  * requests for URLs in the manifest.
@@ -27,4 +26,3 @@ workbox.precaching.precacheAndRoute(self.__precacheManifest, {});
 self.addEventListener("message", e => {
   if (e.data.action == "skipWaiting") self.skipWaiting();
 });
-
