@@ -1,4 +1,4 @@
-importScripts("/precache-manifest.37deb2015883abafebf56f6cbbc25b31.js", "/workbox-v3.6.3/workbox-sw.js");
+importScripts("/precache-manifest.156d65dde92f8087c8e76af11f664d3b.js", "/workbox-v3.6.3/workbox-sw.js");
 workbox.setConfig({modulePathPrefix: "/workbox-v3.6.3"});
 /**
  * Welcome to your Workbox-powered service worker!
@@ -25,5 +25,4 @@ workbox.precaching.precacheAndRoute(self.__precacheManifest, {});
 
 self.addEventListener("message", (e)=>{
     if (e.data.action=='skipWaiting') self.skipWaiting()
-	console.log(e.data);
 });
