@@ -16,12 +16,10 @@ workbox.setConfig({modulePathPrefix: "/workbox-v3.6.3"});
 
 importScripts(
   "/js/extend-sw.js",
-  "/precache-manifest.786f0cd928ce29b37102e7083eec49be.js"
+  "/precache-manifest.b7f575f3c43f85e935caa69ec914ac36.js"
 );
 
 workbox.core.setCacheNameDetails({prefix: "shawn-portfolio-2018"});
-
-workbox.skipWaiting();
 
 /**
  * The workboxSW.precacheAndRoute() method efficiently caches and responds to
