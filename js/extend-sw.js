@@ -9,7 +9,6 @@ self.addEventListener('message', event => {
 
 });
 
-
 self.addEventListener('push', function(event) {
 
   event.waitUntil(
