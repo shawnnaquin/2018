@@ -11,12 +11,10 @@ self.addEventListener('message', event => {
 
 
 self.addEventListener('push', function(event) {
-	console.log(event);
-  var body = event.data.text;
 
   event.waitUntil(
     self.registration.showNotification( 'Shawn Naquin - Developer', {
-      body: body
+      body: event.data.text()
     })
   );
 
