@@ -16,7 +16,7 @@ workbox.setConfig({modulePathPrefix: "/workbox-v3.6.3"});
 
 importScripts(
   "js/extend-sw.js",
-  "/precache-manifest.b75a92cedfd2ba72a616be9ef8d69f31.js"
+  "/precache-manifest.9c3334ae9eab0950bdf9dd5f7e8c33f7.js"
 );
 
 workbox.core.setCacheNameDetails({prefix: "shawn-portfolio-2018"});
