@@ -15,8 +15,8 @@ importScripts("/workbox-v3.6.3/workbox-sw.js");
 workbox.setConfig({modulePathPrefix: "/workbox-v3.6.3"});
 
 importScripts(
-  "/extend-sw.js",
-  "/precache-manifest.0d3beeee5a2580f37e59248a6a8f9753.js"
+  "/js/extend-sw.js",
+  "/precache-manifest.b205e06ff968733e8e5c74350981f658.js"
 );
 
 workbox.core.setCacheNameDetails({prefix: "shawn-portfolio-2018"});
@@ -29,3 +29,5 @@ workbox.core.setCacheNameDetails({prefix: "shawn-portfolio-2018"});
 self.__precacheManifest = [].concat(self.__precacheManifest || []);
 workbox.precaching.suppressWarnings();
 workbox.precaching.precacheAndRoute(self.__precacheManifest, {});
+
+workbox.routing.registerNavigationRoute("/");

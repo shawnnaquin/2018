@@ -1,9 +1,3 @@
-// third party files
-// workbox.routing.registerRoute(
-//     /^https?:\/\/cdn.staticfile.org/,
-//     workbox.strategies.staleWhileRevalidate()
-// );
-
 self.addEventListener('message', event => {
 	event.waitUntil(
 	  self.registration.showNotification( 'Shawn Naquin - Developer', {
