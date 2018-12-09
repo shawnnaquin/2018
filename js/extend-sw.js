@@ -1,25 +1,8 @@
-// let Service Worker take control of pages ASAP
-workbox.skipWaiting();
-workbox.clientsClaim();
-// use `networkFirst` strategy for `*.html`, like all my posts
-workbox.routing.registerRoute(
-    /\.html$/,
-    workbox.strategies.networkFirst()
-);
-
-// use `cacheFirst` strategy for images
-workbox.routing.registerRoute(
-    /img/,
-    workbox.strategies.cacheFirst()
-);
-
 // third party files
 // workbox.routing.registerRoute(
 //     /^https?:\/\/cdn.staticfile.org/,
 //     workbox.strategies.staleWhileRevalidate()
 // );
-
-workbox.routing.registerNavigationRoute("/index.html");
 
 self.addEventListener('message', event => {
 	event.waitUntil(
