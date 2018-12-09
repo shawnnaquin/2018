@@ -16,13 +16,10 @@ workbox.setConfig({modulePathPrefix: "/workbox-v3.6.3"});
 
 importScripts(
   "/js/extend-sw.js",
-  "/precache-manifest.15d6c088eb4e7ed3e4328178d472df56.js"
+  "/precache-manifest.d508b888c24d2119c9efe05c8e277d43.js"
 );
 
 workbox.core.setCacheNameDetails({prefix: "shawn-portfolio-2018"});
-
-workbox.skipWaiting();
-workbox.clientsClaim();
 
 /**
  * The workboxSW.precacheAndRoute() method efficiently caches and responds to
@@ -33,6 +30,6 @@ self.__precacheManifest = [].concat(self.__precacheManifest || []);
 workbox.precaching.suppressWarnings();
 workbox.precaching.precacheAndRoute(self.__precacheManifest, {});
 
-workbox.routing.registerNavigationRoute("/");
+workbox.routing.registerNavigationRoute("/index.html");
 
 workbox.googleAnalytics.initialize({});
