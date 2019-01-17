@@ -1,2 +1,2 @@
-User-agent: *
-Sitemap: https://shawnnaquin.github.io/sitemap.xml
+User-agent: * 
+Disallow: /
